@@ -72,11 +72,11 @@ const questions = [
       type: 'radio'
     },
     {
-      question: "Назвіть свій бургер:",
+      question: "Як ви хочете назвати свій бургер?",
       answers: [
         {
           type: 'text',
-          placeholder: 'Введіть назву'
+          placeholder: 'Введіть назву вашого бургера'
         }
       ],
       type: 'input'

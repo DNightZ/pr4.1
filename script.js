@@ -51,10 +51,8 @@ const playTest = () => {
         `;
       } else if (questions[index].type === 'input') {
         answerItem.innerHTML = `
-    <input type="${questions[index].answers[0].type}" id="answer" placeholder="${questions[index].answers[0].placeholder}" class="d-none" name="answer"> 
-    <label for="answer" class="d-flex flex-column justify-content-between">
-    </label>
-  `;
+          <input type="${questions[index].answers[0].type}" id="burgerNameInput" placeholder="${questions[index].answers[0].placeholder}" name="answer" class="form-control">
+        `;
       } else if (questions[index].type === 'file') {
         answerItem.innerHTML = `
           <input type="${questions[index].answers[0].type}" id="answer" accept="${questions[index].answers[0].accept}" class="d-none">
@@ -69,7 +67,7 @@ const playTest = () => {
   };
 
   const renderQuestions = (indexQuestion) => {
-    formAnswers.innerHTML = ''; 
+    formAnswers.innerHTML = '';
 
     if (numberQuestion >= 0 && numberQuestion <= questions.length - 1) {
       questionTitle.textContent = `${questions[indexQuestion].question}`;
@@ -137,3 +135,4 @@ const playTest = () => {
 
   renderQuestions(numberQuestion);
 };
+
